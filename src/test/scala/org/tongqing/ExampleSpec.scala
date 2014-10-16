@@ -2,6 +2,7 @@ package org.tongqing
 
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
+import scala.collection.mutable
 import scala.collection.mutable.Stack
 
 
@@ -10,10 +11,10 @@ import scala.collection.mutable.Stack
  * CreatedDate: 10/15/14.
  */
 class ExampleSpec extends FunSuite with BeforeAndAfter {
-  var stack: Stack[Int] = _
+  var stack: mutable.Stack[Int] = _
 
   before {
-    stack = new Stack[Int]
+    stack = new mutable.Stack[Int]
   }
 
   test("pop is invoked on a non-empty stack") {
