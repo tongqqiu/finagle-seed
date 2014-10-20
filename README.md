@@ -12,7 +12,10 @@ This is maven based scala project skeleton
 * Comprehensive `.gitignore`
 * Scalatest integration
 * Version management for scala, java and maven
-* Markdown based documentation site generation
+* Markdown based documentation site generation (in `doc` folder)
+* Twitter Finagle RPC examples 
+* Auto generated Finagle skeleton base on Thrift contract
+* Send the trace to local Zipkin
 
 
 
