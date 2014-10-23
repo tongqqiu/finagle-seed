@@ -1,17 +1,39 @@
-# Welcome to MkDocs
+# Scala Seed Project
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+This is maven based scala project skeleton
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Features
 
-## Project layout
+* Mixed Java and Scala Code
+* Incremental Compiling with Zinc (need to download Zinc and run `zinc -start`)
+* Minimal required dependencies and plugins
+* Scala style checking
+* Comprehensive `.gitignore`
+* Scalatest integration
+* Version management for scala, java and maven
+* Markdown based documentation site generation (in `doc` folder)
+* Twitter Finagle RPC examples 
+* Auto generated Finagle skeleton base on Thrift contract
+* Send the trace to local Zipkin
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+
+## Usage
+
+Package
+
+```
+mvn clean package
+```
+
+Test only
+
+```
+mvn test
+```
+
+
+Please see the [help](help.md) for further details to write documents.
+
+

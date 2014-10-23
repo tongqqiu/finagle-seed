@@ -17,6 +17,7 @@
         <scala.version>2.10.4</scala.version>
         <scala.binary.version>2.10</scala.binary.version>
         <scala.macros.version>2.0.1</scala.macros.version>
+        <finalge.version>6.22.0</finalge.version>
         <PermGen>64m</PermGen>
         <MaxPermGen>512m</MaxPermGen>
     </properties>
@@ -116,24 +117,24 @@
         <!-- finagle related dependencies -->
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>util-core_2.10</artifactId>
-            <version>6.22.0</version>
+            <artifactId>util-core_${scala.binary.version}</artifactId>
+            <version>${finalge.version}</version>
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>finagle-thrift_2.10</artifactId>
-            <version>6.22.0</version>
+            <artifactId>finagle-thrift_${scala.binary.version}</artifactId>
+            <version>${finalge.version}</version>
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>finagle-core_2.10</artifactId>
-            <version>6.22.0</version>
+            <artifactId>finagle-core_${scala.binary.version}</artifactId>
+            <version>${finalge.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>finagle-zipkin_2.10</artifactId>
-            <version>6.22.0</version>
+            <artifactId>finagle-zipkin_${scala.binary.version}</artifactId>
+            <version>${finalge.version}</version>
         </dependency>
 
 
@@ -145,7 +146,7 @@
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>scrooge-core_2.10</artifactId>
+            <artifactId>scrooge-core_${scala.binary.version}</artifactId>
             <version>3.17.0</version>
         </dependency>
 

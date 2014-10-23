@@ -5,7 +5,6 @@ package org.tongqing.finagle
  * CreatedDate: 10/20/14.
  */
 
-import com.twitter.util.Await
 import org.junit.runner.RunWith
 import org.scalatest.WordSpec
 import org.scalatest.junit.JUnitRunner
