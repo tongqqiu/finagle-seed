@@ -1,4 +1,4 @@
-# Scala Seed Project
+# Finagle Seed Project
 
 This is maven based finagle project skeleton
 
