@@ -153,7 +153,11 @@
             <artifactId>scrooge-core_${scala.binary.version}</artifactId>
             <version>3.17.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>2.6.0</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -168,10 +172,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>2.6.0</version>
+            <groupId>org.scala-tools.testing</groupId>
+            <artifactId>specs_2.9.1</artifactId>
+            <version>1.6.9</version>
         </dependency>
+
     </dependencies>
 
 

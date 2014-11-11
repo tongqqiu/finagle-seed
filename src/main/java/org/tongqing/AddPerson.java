@@ -1,6 +1,5 @@
 package org.tongqing;
 
-import org.tongqing.AddressBookProtos.*;
 
 import java.io.*;
 
@@ -9,10 +8,10 @@ import java.io.*;
  */
 public class AddPerson {
 
-    static Person PromptForAddress(BufferedReader stdin,
+    static Addressbook.Person PromptForAddress(BufferedReader stdin,
                                    PrintStream stdout) throws IOException {
 
-        Person.Builder person = Person.newBuilder();
+        Addressbook.Person.Builder person = Addressbook.Person.newBuilder();
 
         stdout.print("Enter person id:");
         person.setId(Integer.valueOf(stdin.readLine()));
@@ -33,17 +32,17 @@ public class AddPerson {
                 break;
             }
 
-            Person.PhoneNumber.Builder phoneNumber =
-                    Person.PhoneNumber.newBuilder().setNumber(number);
+            Addressbook.Person.PhoneNumber.Builder phoneNumber =
+                    Addressbook.Person.PhoneNumber.newBuilder().setNumber(number);
 
             stdout.print("Is this a mobile, home, or work phone? ");
             String type = stdin.readLine();
             if (type.equals("mobile")) {
-                phoneNumber.setType(Person.PhoneType.MOBILE);
+                phoneNumber.setType(Addressbook.Person.PhoneType.MOBILE);
             } else if (type.equals("home")) {
-                phoneNumber.setType(Person.PhoneType.HOME);
+                phoneNumber.setType(Addressbook.Person.PhoneType.HOME);
             } else if (type.equals("work")) {
-                phoneNumber.setType(Person.PhoneType.WORK);
+                phoneNumber.setType(Addressbook.Person.PhoneType.WORK);
             } else {
                 stdout.println("Unknown phone type.  Using default.");
             }
@@ -63,7 +62,7 @@ public class AddPerson {
             System.exit(-1);
         }
 
-        AddressBook.Builder addressBook = AddressBook.newBuilder();
+        Addressbook.AddressBook.Builder addressBook = Addressbook.AddressBook.newBuilder();
 
         // Read the existing address book.
         try {

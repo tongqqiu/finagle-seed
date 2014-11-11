@@ -1,0 +1,10 @@
+message ProtoUser {
+    required string name = 1;
+    optional int32 id = 2;
+}
+
+option java_generic_services = true;
+
+service ProtoUserService {
+    rpc CreateUser(ProtoUser) returns (ProtoUser);
+}

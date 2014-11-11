@@ -7,15 +7,15 @@ import java.io.FileInputStream;
  */
 public class ListPerson {
     // Iterates though all people in the AddressBook and prints info about them.
-    static void Print(AddressBookProtos.AddressBook addressBook) {
-        for (AddressBookProtos.Person person: addressBook.getPersonList()) {
+    static void Print(Addressbook.AddressBook addressBook) {
+        for (Addressbook.Person person: addressBook.getPersonList()) {
             System.out.println("Person ID: " + person.getId());
             System.out.println("  Name: " + person.getName());
             if (person.hasEmail()) {
                 System.out.println("  E-mail address: " + person.getEmail());
             }
 
-            for (AddressBookProtos.Person.PhoneNumber phoneNumber : person.getPhoneList()) {
+            for (Addressbook.Person.PhoneNumber phoneNumber : person.getPhoneList()) {
                 switch (phoneNumber.getType()) {
                     case MOBILE:
                         System.out.print("  Mobile phone #: ");
@@ -41,8 +41,8 @@ public class ListPerson {
         }
 
         // Read the existing address book.
-        AddressBookProtos.AddressBook addressBook =
-                AddressBookProtos.AddressBook.parseFrom(new FileInputStream(args[0]));
+        Addressbook.AddressBook addressBook =
+                Addressbook.AddressBook.parseFrom(new FileInputStream(args[0]));
 
         Print(addressBook);
     }

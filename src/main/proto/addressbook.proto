@@ -1,7 +1,6 @@
 package org.tongqing;
 
 option java_package = "org.tongqing";
-option java_outer_classname = "AddressBookProtos";
 
 message Person {
   required string name = 1;
@@ -25,3 +24,4 @@ message Person {
 message AddressBook {
   repeated Person person = 1;
 }
+
