@@ -40,3 +40,7 @@ mvn test
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tongqqiu/finagle-seed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
