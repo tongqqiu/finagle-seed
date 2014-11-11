@@ -10,5 +10,7 @@ class GreetingInScala {
     val delegate = new GreetingInJava
     println("Delegate to Java method")
     delegate.greet()
+
+    
   }
 }

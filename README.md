@@ -13,6 +13,10 @@ This is maven based finagle project skeleton
     * Scalatest integration
     * Version management for scala, java and maven
     * Markdown based documentation site generation (in `doc` folder)
+* Proto-Buffer
+    * Maven plug-in to auto generated proto-buffer classes based on proto-buffer IDL
+    * Examples to read and write messages using Proto-buffer `AddPerson` and `ListPerson`
+
 * Finagle
     * Twitter Finagle RPC examples 
     * Auto generated Finagle skeleton base on Thrift contract
