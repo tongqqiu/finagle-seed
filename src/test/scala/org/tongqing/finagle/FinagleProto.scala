@@ -25,7 +25,7 @@ class RpcProtobufSpec {
     .retries(2)
     .requestTimeout(Duration(CLIENT_TIMEOUT_SECONDS, TimeUnit.SECONDS))
     val totalRequests = new AtomicInteger()
-    val service = new SampleUserServiceImpl(80, null)
+    val service = new SampleUserServiceImpl()
     val server = factory.createServer(serverBuilder.asInstanceOf[ServerBuilder[(String, Message), (String, Message), Any, Any, Any]],
       port,
       service,
@@ -82,7 +82,7 @@ class RpcProtobufSpec {
   }
 }
 
-class SampleUserServiceImpl(val name: Int, val getHistoricWeather: Callable[Any]) extends ProtoUserService {
+class SampleUserServiceImpl() extends ProtoUserService {
 
   private val userIdCounter: AtomicInteger = new AtomicInteger(0)
 
