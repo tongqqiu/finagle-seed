@@ -1,5 +1,7 @@
 # Finagle Seed Project
 
+[![Build Status](https://travis-ci.org/tongqqiu/finagle-seed.svg)](https://travis-ci.org/tongqqiu/finagle-seed)
+
 This is maven based finagle project skeleton
 
 
