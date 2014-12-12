@@ -4,6 +4,12 @@
 
 This is maven based finagle project skeleton
 
+## Requirements
+
+- JDK
+- Maven
+- protobuf
+
 
 ## Features
 
